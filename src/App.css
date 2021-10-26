@@ -1,38 +1,41 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Jost', sans-serif;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.shopNowBtn{
+  position: relative;
+  text-decoration: none;
+  color: black;
+  border: none;
+  border: 1px solid black;
+  height: 61px;
+  width: 130px;
+  margin-top: 20px!important;
+  background-color: transparent;
+  z-index: 1;
+  transition: all 0.4s ease-in-out;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.shopNowBtn::before{
+  content: " ";
+  position: absolute;
+  
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-color: black;
+  z-index: -1;
+  transform: scaleX(0);
+  transition: transform 0.4s ease-in-out;
+  transform-origin: 0%;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.shopNowBtn:hover::before{
+  transform: scaleX(1);
+}
+.shopNowBtn:hover{
+  
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  transition: all 0.4s ease-in-out;
 }

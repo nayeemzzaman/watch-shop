@@ -1,0 +1,131 @@
+.featuredWatches{
+    height: 105vh;
+    margin: 10px;
+    margin-top: 0px;
+}
+.watch-upperRow,.watch-lowerRow{
+    height: 52vh;
+}
+.image{
+    height: 40vh;
+}
+.details{
+    height: 12vh;
+}
+.image img{
+    height:fit-content;
+    width: 220px;
+    cursor: pointer;
+    transform: scale(1);
+    transition: all 0.5s ease;
+    /* border-bottom: 1.5px solid lightgray; */
+}
+.featuredWatches .image{
+    display: flex;
+    justify-content: center;
+    border-bottom: 1.5px solid lightgray;
+}
+.featuredWatches .image:hover img{
+    transform: scale(1.10);
+    transition: all 0.7s ease;
+}
+.featuredWatches .details p{
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+}
+.featuredWatches .details h5{
+    padding-top: 0px;
+    margin-top: 0px;
+}
+.hoverOnWatch1,.hoverOnWatch2{
+    visibility: hidden;
+    opacity: 0;
+    list-style: none;
+    display: flex;
+    position: absolute;
+    padding: 0px 0px 0px 0px;
+    cursor: pointer;
+    transform: translateX(-3px) translateY(50px);
+    transition: all 0.5s ease;
+} 
+.hoverOnWatch1{
+    top: 120px;
+}
+.hoverOnWatch2{
+    top: 500px;
+}
+
+.watch-upperRow:hover .hoverOnWatch1{
+    transform: translateX(0px) translateY(0px);
+    transition: all 0.5s ease;
+    visibility: visible;
+    opacity: 1;
+}
+.watch-lowerRow:hover .hoverOnWatch2{
+    transform: translateX(0px) translateY(0px);
+    transition: all 0.5s ease;
+    visibility: visible;
+    opacity: 1;
+}
+.hoverOnWatch-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 7px;
+    padding-left: 12px;
+    padding-right: 12px;
+    margin: 5px;
+    background-color: rgba(236, 236, 236, 0.8);
+    font-size: 20px;
+    transition: all 0.5s ease;
+}
+.hoverOnWatch-item:hover{
+    background-color: black;
+    transition: all 0.5s ease;
+}
+.hoverOnWatch-item:hover .hoverOnWatchIcons{
+    color: white!important;
+}
+.hoverOnWatch-item .tooltiptext{
+    opacity: 0;
+    visibility: hidden;
+    position : absolute;
+    display: block;
+    width: auto;
+    white-space: nowrap;
+    bottom: 100%;
+    background-color: black;
+    color:white;
+    font-size: 15px;
+    border-radius: 3px;
+    padding: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    transform: translateX(0px) translateY(10px);
+    transition: all 0.3s ease;
+    
+}
+.hoverOnWatch-item .tooltiptext::before{
+    content: " ";
+    height: 12px;
+    width: 12px;
+    background-color: black;
+    position:absolute;
+    top: 80%;
+    left: 45%;
+    transform: rotate(45deg);
+    border-radius: 1px;
+}
+.hoverOnWatch-item:hover .tooltiptext{
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0px) translateY(-10px);
+    transition: all 0.3s ease;
+}
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+  }
+

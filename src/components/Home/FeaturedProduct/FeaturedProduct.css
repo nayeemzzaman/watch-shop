@@ -1,0 +1,60 @@
+.featuredProduct{
+    margin-left: 20%;
+    padding-top: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    height: 120vh;
+    margin-bottom: 100px;
+}
+
+.featuredProduct-body .blackFriday{
+    float: left;
+    width: 30%;
+    height: 105vh;
+    background-image: url("../../../images/black-friday-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+.featuredProduct-heading{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+.blackFriday h1{
+    margin-top: 100px;
+    font-size: 50px;
+}
+.blackFriday .shopNowBtn{
+    height: 60px;
+    margin-top: 100px!important;
+}
+
+.featuredWatches .details{
+    text-align: center;
+    padding-top: 10px;
+}
+.slick-next{
+    right: 5%!important;
+}
+.slick-prev:before,
+.slick-next:before {
+  color: black;
+}
+.slider-btn{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 5%;
+}
+.slider-btn .prev-btn,
+.slider-btn .next-btn {
+    font-size: 25px;
+    padding: 3px;
+    box-shadow: rgba(149, 157, 165, 0.1) 0px 8px 24px;
+    cursor:pointer;
+}
+.slider-btn .next-btn {
+    margin-left: 3px;
+}

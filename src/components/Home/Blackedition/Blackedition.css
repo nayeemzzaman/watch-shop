@@ -1,0 +1,39 @@
+.black-edition{
+    height: 60vh;
+    margin-left: 20%;
+    margin-bottom: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
+    display:flex;
+}
+.black-edition-background{
+    border: 1px solid transparent;
+    padding: 50px;
+    background-color:#f4f4f4;
+    background-image: url("../../../images/black-edition1.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 60vh;
+    width: 65%;
+    display: flex;
+    align-items: center;
+}
+.black-edition-background .texts{
+    padding:10px;
+}
+.black-edition-background .texts h1{
+    font-size: 50px;
+}
+.black-edition-background .texts h3{
+    color: gray;
+}
+.discount{
+    margin-left: 2%;
+    background-image: url("../../../images/white-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 60vh;
+    width: 32%;
+}

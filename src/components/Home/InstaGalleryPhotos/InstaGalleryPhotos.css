@@ -1,0 +1,15 @@
+.insta-gallery-photos{
+    height: 186px;
+    width: 186px;
+    overflow: hidden;
+}
+.insta-gallery-photos img{
+    height: 186px;
+    width: 186px;
+    transform: scale(1);
+    transition: all 0.5s ease;
+}
+.insta-gallery-photos:hover img{
+    transform: scale(1.2);
+    transition: all 0.5s ease;
+}

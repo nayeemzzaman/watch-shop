@@ -1,0 +1,13 @@
+.daily-essentials{
+    margin-left: 20%;
+    padding-left: 40px;
+    padding-right: 50px;
+    margin-bottom: 100px;
+}
+.daily-essentials h1{
+    padding-left: 10px;
+}
+.daily-essentials-watches{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}

@@ -1,0 +1,35 @@
+.newsletter{
+    margin-left: 20%;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-bottom: 50px;
+    line-height:1.5em;
+    width: 100%;
+    display: flex;
+    border: 1px solid red;
+}
+.join-newsletter{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    width: 30%;
+}
+.envelope-icon{
+    font-size: 50px!important;
+    color: white;
+    padding: 28px;
+    
+    background-color: black;
+    border-radius: 50%;
+}
+.mail-box{
+    width: 60%;
+    display:flex;
+    align-items: center;
+    padding-left: 40px;
+    width:fit-content;
+    border: 1px solid red;
+}
+.mail-box input{
+    height: 50%;
+}

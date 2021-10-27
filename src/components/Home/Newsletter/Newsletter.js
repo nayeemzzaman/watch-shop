@@ -1,5 +1,6 @@
 import React from 'react';
 import {BiEnvelope} from 'react-icons/bi';
+import { BsArrowRight } from 'react-icons/bs';
 import './Newsletter.css';
 const Newsletter = () => {
     return (
@@ -10,12 +11,13 @@ const Newsletter = () => {
                 </div>
                 <div className='newsletter-header'>
                     <h2>Join Our Newsletter</h2>
-                    <p>Subscribe to our newsletter and get <br /> 10% off your first purchase</p>
+                    <p>Subscribe to our newsletter and get 10% off<br /> your first purchase</p>
                 </div>
             </div>
-            <div className='mail-box'>
-                <input type="text" placeholder="Your email address" />
-            </div>
+            <form className='mail-box'>
+                <input className="email-form" type="text" placeholder="Your email address" />
+                <span className="send-btn" ><BsArrowRight /></span>
+            </form>
         </div>
     );
 };

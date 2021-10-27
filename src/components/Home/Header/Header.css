@@ -20,27 +20,14 @@
 }
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  height: 100px;
-  width: 100px;
+  height: 50px;
+  width: 50px;
   background-size: 100%, 100%;
-  background-image: none;
   position: absolute;
-  bottom: 0;
+  bottom: 10px;
 }
 
-.carousel-control-next-icon:after
-{
-  content: '>';
-  font-size: 55px;
-  color: white;
-}
 
-.carousel-control-prev-icon:after {
-  content: '<';
-  font-size: 55px;
-  color: white;
-
-}
 @media screen and (max-width: 960px) {
   .header{
     margin-left: 0;

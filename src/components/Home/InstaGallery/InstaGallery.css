@@ -8,12 +8,12 @@
     grid-template-columns: repeat(6, 1fr);
     padding-left: 50px;
     padding-right: 50px;
+    width: 80%;
 }
 .insta-gallery .white-board{
     text-decoration: none;
     position: absolute;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 24.7%;
     margin-top: 75px;
     background-color: #fff;
     font-size: 30px;

@@ -1,6 +1,7 @@
 .header{
     margin-left: 20%;
     height: 90vh;
+    background-color: black;
 }
 .carousel-caption{
     color: white;
@@ -9,11 +10,14 @@
     left: 0px;
     height: 300px;
     text-align:left;
-    padding-left: 80px;
+    padding-left: 50px;
 }
 .carousel-caption h1{
-    font-size: 60px;
-    font-weight: bold;
+    font-size: 70px;
+    letter-spacing: 1px;
+}
+.carousel-caption h4{
+    letter-spacing: 2px;
 }
 .c-image{
     height: 88vh;
@@ -26,8 +30,58 @@
   position: absolute;
   bottom: 10px;
 }
-
-
+.header .slider-btn{
+  bottom: 15%;
+  left: 20%;
+  padding-left: 50px;
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 5%;
+}
+.header .slider-btn .prev-btn,
+.header .slider-btn .next-btn {
+    font-size: 35px;
+    font-weight: normal;
+    padding: 5px;
+    cursor:pointer;
+    border: none;
+    background-color: transparent;
+}
+.header .slider-btn .next-btn {
+    color: white;
+    margin-left: 3px;
+}
+.header .slider-btn .slider-background{
+    display: flex;
+    height: 40px;
+    width: 60px;
+    background: url('../../../images/slider-bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+}
+.sliderNumFixed,
+.sliderNumDynamic{
+    font-size: 17px;
+    margin-left: 12px;
+}
+.sliderNumFixed{
+  margin-left: 20px;
+}
+.carousel-caption .shopNowBtn{
+  height: 55px;
+  border: 1px solid white;
+  color: white;
+}
+.carousel-caption .shopNowBtn::before{
+  background-color: white;
+}
+.carousel-caption .shopNowBtn:hover{
+  color: black;
+}
 @media screen and (max-width: 960px) {
   .header{
     margin-left: 0;

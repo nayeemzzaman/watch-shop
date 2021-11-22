@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 // import { Button } from './Button';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
@@ -8,11 +8,14 @@ import {BiSearch, BiUser} from 'react-icons/bi';
 import {FiShoppingCart, FiTwitter} from 'react-icons/fi';
 import {RiFacebookCircleLine, RiInstagramLine} from 'react-icons/ri';
 import { IconContext } from 'react-icons/lib';
+import { getDatabaseCart } from '../../../utilities/databaseManager';
+import fakeData from '../../../fakeData/fakedata';
+import CartContext from '../../../Context/CartContext';
 
 function Navbar() {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
-
+  const [cart, setCart] = useState([]);
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
 
@@ -32,7 +35,13 @@ function Navbar() {
     }
   }, []);
 
-
+  const { cartItem } = useContext(CartContext);
+  console.log(cartItem);
+  let totalItemQty=0;
+  for(let i=0; i<cartItem.length; i++) {
+    totalItemQty+=cartItem[i].quantity;
+  }
+  // console.log(totalItemQty)
   return (
     <>
       <IconContext.Provider value={{ color: '#fff' }}>
@@ -47,9 +56,11 @@ function Navbar() {
                   </li>
                   <li className='cart-item'>
                     <Link><MdFavoriteBorder /></Link>
+                    <span className="wish-count">0</span>
                   </li>
                   <li className='cart-item'>
                     <Link><FiShoppingCart /></Link>
+                    <span className="watch-count">{totalItemQty}</span>
                   </li>
                 </ul>
                 <Link to='/' className='sidebar-logo' onClick={closeMobileMenu}>

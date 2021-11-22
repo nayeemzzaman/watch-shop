@@ -1,13 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import {FiZoomIn, FiZoomOut } from 'react-icons/fi';
 import {  MdFavoriteBorder } from 'react-icons/md';
 import { RiShoppingBasketLine } from 'react-icons/ri';
 import { IconContext } from 'react-icons/lib';
+import Cart from '../../../Context/CartContext';
+
 import './FeaturedWatches.css';
 
-const FeaturedWatches = ({ watch }) => {
-
+const FeaturedWatches = (props) => {
+     const { watch } = props;
+     // const { addToCart } = useContext(Cart);
      return (
           <>
       <IconContext.Provider value={{ color: 'black' ,className: 'hoverOnWatchIcons'}}>
@@ -18,7 +21,8 @@ const FeaturedWatches = ({ watch }) => {
                          <ul className="hoverOnWatch1">
                          
                               <li className="hoverOnWatch-item ">
-                                   <Link><RiShoppingBasketLine /></Link>
+                                   <Link
+                                   ><RiShoppingBasketLine /></Link>
                                    <span className="tooltiptext">Add to cart</span>
                               </li>
                               
@@ -43,7 +47,8 @@ const FeaturedWatches = ({ watch }) => {
                          <ul className="hoverOnWatch2">
                          
                          <li className="hoverOnWatch-item ">
-                                   <Link><RiShoppingBasketLine /></Link>
+                                   <Link
+                                   ><RiShoppingBasketLine /></Link>
                                    <span className="tooltiptext">Add to cart</span>
                               </li>
                               

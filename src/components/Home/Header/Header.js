@@ -27,7 +27,7 @@ const Header = () => {
     
     const sliderRef = useRef(null);
     useEffect( ()=>{
-        console.log(sliderRef.current);
+        //console.log(sliderRef.current);
     },[sliderRef])
     const previousClick=()=>{
         const currentSlideNum = parseInt(document.getElementsByClassName("sliderNumDynamic")[0].innerHTML);

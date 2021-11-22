@@ -20,39 +20,51 @@ import InstaGalleryPhotos from '../InstaGalleryPhotos/InstaGalleryPhotos';
 const InstaGallery = () => {
     const instaData=[
         {
+            key: "I123",
             image: instaPhoto1,
         },
         {
+            key: "I124",
             image: instaPhoto2,
         },
         {
+            key: "I125",
             image: instaPhoto3,
         },
         {
+            key: "I126",
             image: instaPhoto4,
         },
         {
+            key: "I127",
             image: instaPhoto5,
         },
         {
+            key: "I128",
             image: instaPhoto6,
         },
         {
+            key: "I129",
             image: instaPhoto7,
         },
         {
+            key: "I131",
             image: instaPhoto8,
         },
         {
+            key: "I132",
             image: instaPhoto9,
         },
         {
+            key: "I133",
             image: instaPhoto10,
         },
         {
+            key: "I134",
             image: instaPhoto11,
         },
         {
+            key: "I135",
             image: instaPhoto12,
         },
     ]
@@ -61,7 +73,7 @@ const InstaGallery = () => {
         <section className="insta-gallery">
             <div className="insta-gallery-container">
                 {
-                    instaData.map(insta => <InstaGalleryPhotos insta={insta}/>)
+                    instaData.map(insta => <InstaGalleryPhotos key={insta.key} insta={insta}/>)
                 }
                 <div className="white-board">
                     <h1><FaInstagram /></h1>

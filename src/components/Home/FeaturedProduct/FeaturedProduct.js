@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useContext, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import './FeaturedProduct.css'
 import featuredwatch1 from '../../../images/featuredWatch1.png';
@@ -12,9 +12,12 @@ import featuredwatch8 from '../../../images/featuredWatch8.png';
 import FeaturedWatches from '../FeaturedWatches/FeaturedWatches';
 import {GrPrevious, GrNext} from 'react-icons/gr';
 import Slider from "react-slick";
+import { addToDatabaseCart } from '../../../utilities/databaseManager';
+import CartContext from '../../../Context/CartContext';
 
 const featuredWatches = [
     {
+        "key": 'FP1234',
         name1: "Legend Silver Dial",
         name2: "Legend Black Dial",
         price: 159.00,
@@ -22,6 +25,7 @@ const featuredWatches = [
         image2: featuredwatch8,
     },
     {
+        "key": 'FP1235',
         name1: "Nautilo Blue Men’s",
         name2: "Tourbillon Silver Dial",
         price: 169.00,
@@ -29,6 +33,7 @@ const featuredWatches = [
         image2: featuredwatch7,
     },
     {
+        "key": 'FP1236',
         name1: "Silver Stainless Steel",
         name2: "Silver Stainless Steel",
         price: 159.00,
@@ -36,6 +41,7 @@ const featuredWatches = [
         image2: featuredwatch6,
     },
     {
+        "key": 'FP1237',
         name1: "Legend Golden Dial",
         name2: "Legend Silver Dial",
         price: 159.00,
@@ -43,6 +49,7 @@ const featuredWatches = [
         image2: featuredwatch4
     },
     {
+        "key": 'FP1238',
         name2: "Legend Golden Dial",
         name1: "Legend Black Dial",
         price: 179.00,
@@ -50,6 +57,7 @@ const featuredWatches = [
         image1: featuredwatch8,
     },
     {
+        "key": 'FP1239',
         name1: "Nautilo Blue Men’s",
         name2: "Silver Stainless Steel",
         price: 160.00,
@@ -68,9 +76,22 @@ const FeaturedProduct = () => {
     };
     const sliderRef = useRef(null);
     useEffect( ()=>{
-        console.log(sliderRef.current);
+        //console.log(sliderRef.current);
     },[sliderRef])
-    
+    // const { cartItem } = useContext(CartContext);
+    // const handleAddToCart = (watch) => {
+    //     const watchKey = watch.key;
+    //     const sameWatch = cartItem.find(item => item.key===watchKey);
+    //     let count = 1;
+    //     if(sameWatch){
+    //         count = sameWatch.quantity+1;
+    //         sameWatch.quantity = count;
+    //     }
+    //     else{
+    //         watch.quantity = 1;
+    //     }
+    //     addToDatabaseCart(watchKey, count);
+    // }
     return (
         <section className="featuredProduct">
             <div className="featuredProduct-heading">
@@ -95,7 +116,7 @@ const FeaturedProduct = () => {
                 
                 <Slider ref={sliderRef} {...settings}>
                     {
-                            featuredWatches.map(watch => <FeaturedWatches watch={watch} />)
+                            featuredWatches.map(watch => <FeaturedWatches key={watch.key} watch={watch} />)
                     }
                 </Slider>
 

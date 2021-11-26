@@ -6,7 +6,7 @@
   font-size: 1.2rem;
   position: fixed;
   top: 0;
-  z-index: 999;
+  z-index: 0;
 } 
 
 .sidebar-logo {
@@ -84,17 +84,20 @@
   width: 20px;
   font-size:13px;
   text-align: center;
-  position: absolute;
-  background-color: white;
+  position: fixed;
+  margin-left: -8px;
+  background-color: rgb(255, 255, 255);
   border: none;
   border-radius: 50px;
+  cursor: pointer;
+  
 }
-.cart-item .watch-count{
+/* .cart-item .watch-count{
   right: 50px;
 }
 .cart-item .wish-count{
   right: 102px;
-}
+} */
 .social-menu{
   list-style: none;
   display: flex;

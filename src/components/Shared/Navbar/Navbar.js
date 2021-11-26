@@ -10,15 +10,15 @@ import {RiFacebookCircleLine, RiInstagramLine} from 'react-icons/ri';
 import { IconContext } from 'react-icons/lib';
 import { getDatabaseCart } from '../../../utilities/databaseManager';
 import fakeData from '../../../fakeData/fakedata';
-import CartContext from '../../../Context/CartContext';
+import CartContext, { CartState } from '../../../Context/Context';
+import CartSide from '../CartSide/CartSide';
 
 function Navbar() {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
-  const [cart, setCart] = useState([]);
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
-
+  
   const showButton = () => {
     if (window.innerWidth <= 960) {
       setButton(false);
@@ -34,7 +34,17 @@ function Navbar() {
       window.removeEventListener('resize', showButton);
     }
   }, []);
-
+  // const handleCartClick = ()=>{
+  //   <CartSide></CartSide>
+  // }
+  // const changeClass = () =>{
+  //   setActiveCart({stateValue: true});
+  // }
+  const [activeCart, setActiveCart] = useState(false)
+  const activeCartHandle = (stateValue) => {
+    setActiveCart(stateValue);
+    
+  }
   const { cartItem } = useContext(CartContext);
   console.log(cartItem);
   let totalItemQty=0;
@@ -44,6 +54,7 @@ function Navbar() {
   // console.log(totalItemQty)
   return (
     <>
+      <CartSide handleCart ={activeCartHandle} activeCart={activeCart}></CartSide>
       <IconContext.Provider value={{ color: '#fff' }}>
         <div className='sidebar'>
             <div className='sidebar-container '>
@@ -58,7 +69,9 @@ function Navbar() {
                     <Link><MdFavoriteBorder /></Link>
                     <span className="wish-count">0</span>
                   </li>
-                  <li className='cart-item'>
+                  <li className='cart-item'
+                       onClick={()=>activeCartHandle(true)}
+                  >
                     <Link><FiShoppingCart /></Link>
                     <span className="watch-count">{totalItemQty}</span>
                   </li>

@@ -3,30 +3,19 @@ import './DailyEssentials.css';
 
 import DailyEssentialWatch from '../DailyEssentialWatch/DailyEssentialWatch';
 import fakeData from '../../../fakeData/fakedata';
-import { addToDatabaseCart, getDatabaseCart } from '../../../utilities/databaseManager';
-import CartContext from '../../../Context/CartContext';
+import { addToDatabaseCart, getDatabaseCart, removeFromDatabaseCart } from '../../../utilities/databaseManager';
+import CartContext, { CartState } from '../../../Context/Context';
 const DailyEssentials = () => {
     
-    const { cartItem } = useContext(CartContext);
-    //console.log(cartItem);
+    const {cartItem } = useContext(CartContext);
+    console.log(cartItem);
     //addToDatabaseCart(cartItem)
     const [cart, setCart] = useState([]);
     const [watchData, setWatchData] = useState([]);
     useEffect( ()=>{
         setWatchData(fakeData);
     },[watchData]);
-    // useEffect( ()=>{
-    //     const savedCart = getDatabaseCart();
-    //     const watchKeys = Object.keys(savedCart);
-    //     //console.log(watchKeys);
-    //     const cartWatches = watchKeys.map( key => {
-    //         const watch = fakeData.find(pd => pd.key===key);
-    //         watch.quantity = savedCart[key];
-    //         return watch;
-    //     })
-    //     setCart(cartWatches);
-    // },[]);
-    //console.log(cart);
+
     const handleAddToCart = (watch) => {
         const watchKey = watch.key;
         const sameWatch = cartItem.find(item => item.key===watchKey);
@@ -40,6 +29,10 @@ const DailyEssentials = () => {
         }
         addToDatabaseCart(watchKey, count);
     }
+    // const removeFromCart = (productKey) =>{
+    //     //const newCart = cartItem.filter(item => item.key !== productKey);
+    //     removeFromDatabaseCart(productKey)
+    // }
     return (
         <section className="daily-essentials">
             <div>

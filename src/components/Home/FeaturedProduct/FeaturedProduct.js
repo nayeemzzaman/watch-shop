@@ -13,7 +13,7 @@ import FeaturedWatches from '../FeaturedWatches/FeaturedWatches';
 import {GrPrevious, GrNext} from 'react-icons/gr';
 import Slider from "react-slick";
 import { addToDatabaseCart } from '../../../utilities/databaseManager';
-import CartContext from '../../../Context/CartContext';
+import CartContext from '../../../Context/Context';
 
 const featuredWatches = [
     {

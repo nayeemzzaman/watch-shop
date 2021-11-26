@@ -5,12 +5,12 @@ import { MdFavoriteBorder } from 'react-icons/md';
 import { RiShoppingBasketLine } from 'react-icons/ri';
 import { IconContext } from 'react-icons/lib';
 import './DailyEssentialWatch.css';
-import Cart from '../../../Context/CartContext';
+import CartContext, { CartState } from '../../../Context/Context';
 const DailyEssentialWatch = (props) => {
     //console.log(props);
     const {watch} = props;
     //console.log(watch);
-    const { addToCart } = useContext(Cart);
+    const { addToCart } = useContext(CartContext);
     return (
         <IconContext.Provider value={{ color: 'black', className: 'hoverOnWatchIcons' }}>
             <div className="dailyEssential-watch">

@@ -1,8 +1,8 @@
 .dailyEssential-watch{
     height: 48vh;
-    margin-left: 10px;
-    margin-top: 0px;
     text-align: center;
+    /* border: 1px solid red; */
+    margin: 5px;
 }
 
 
@@ -11,7 +11,7 @@
 }
 .dailyEssential-watch .image img{
     height:fit-content;
-    width: 200px;
+    width: 100%;
     cursor: pointer;
     transform: scale(1);
     transition: all 0.5s ease;

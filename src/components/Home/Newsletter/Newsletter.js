@@ -10,8 +10,8 @@ const Newsletter = () => {
                     <BiEnvelope />
                 </div>
                 <div className='newsletter-header'>
-                    <h2>Join Our Newsletter</h2>
-                    <p>Subscribe to our newsletter and get 10% off<br /> your first purchase</p>
+                    <h4>Join Our Newsletter</h4>
+                    <p>Subscribe to our newsletter and get <br />10% off your first purchase</p>
                 </div>
             </div>
             <form className='mail-box'>

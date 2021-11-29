@@ -14,7 +14,7 @@
     width: 40%;
 }
 .envelope-icon{
-    font-size: 50px!important;
+    font-size: 3em!important;
     color: white;
     padding: 28px;
     background-color: black;
@@ -28,21 +28,21 @@
     width: 60%!important;
     display: flex;
     align-items: center;
-    padding-left: 40px;
+    padding-left: 2.5em;
     width: fit-content;
 }
 input:focus{
     outline: none;
 }
 .mail-box .email-form{
-    height: 50%;
+    height: 8vh;
     width: 100%!important;
     border: 1px solid gray ;
     border-right: none!important;
     padding-left: 20px;
 }
 .mail-box .send-btn{
-    height: 50%;
+    height: 8vh;
     width: 10%;
     border: 1px solid gray;
     border-left: none!important;

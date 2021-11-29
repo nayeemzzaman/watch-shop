@@ -38,6 +38,7 @@ const CartSideItem = ({orderItem}) => {
         }
         
     }
+    
     return (
         <>
         <div className='order-items'>
@@ -60,7 +61,7 @@ const CartSideItem = ({orderItem}) => {
             <div className='order-item-third'>
                 <p><FaTimes className='icon'
                     onClick={() => removeFromCart(orderItem.key)}/></p>
-                <p>{orderItem.price}</p>
+                <p className='amount'>${orderItem.price*orderItem.quantity}</p>
             </div>
         </div>
         <div><hr className='hr-line'/></div>

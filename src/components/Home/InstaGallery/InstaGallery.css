@@ -1,5 +1,6 @@
 .insta-gallery{
     margin-left: 20%;
+    width: 80%;
     margin-bottom: 50px;
     height: 50vh;
 }
@@ -8,13 +9,13 @@
     grid-template-columns: repeat(6, 1fr);
     padding-left: 50px;
     padding-right: 50px;
-    width: 80%;
+    width: 100%;
 }
 .insta-gallery .white-board{
     text-decoration: none;
     position: absolute;
-    margin-left: 24.7%;
-    margin-top: 75px;
+    right: 26.3%;
+    margin-top: 8vh;
     background-color: #fff;
     font-size: 30px;
     text-align: center;

@@ -1,33 +1,32 @@
 .order-items{
     display: flex;
-    justify-content: center;
-    padding: 5px;
-    margin-top: 10px;
+    justify-content: space-between;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    margin-top: 0.6em;
 }
 .order-item-first{
     height: 80px;
-    width: 70px;
+    width: 4em;
 }
 .order-item-second{
-    margin-left: 30px;
-    margin-right: 30px;
+    margin-left: 1em;
+    margin-right: 1em;
     height: 80px;
-    width: 150px;
+    width: 10em;
 }
 .order-item-second .quantity{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px;
-    width: 80px;
+    padding: 0.3em;
+    width: 5em;
     border: 1px solid lightgray;
 }
 .order-item-second .number{
-    font-size: 18px;
+    font-size: 1.1em;
 }
-.order-item-second .icon{
-    cursor: pointer;
-}
+
 .order-item-third{
     text-align: center;
     height: 80px;
@@ -41,12 +40,12 @@
     margin-bottom: 15px;
 }
 .order-items img{
-    border: 1px solid rgba(0,0,0,0.5);
+    border: 1px solid lightgray;
     height: 80px;
-    width: 70px;
+    width: 4em;
 }
 .hr-line{
     margin: auto;
     margin-top: 10px;
-    width: 350px;
+    width: 22em;
 }

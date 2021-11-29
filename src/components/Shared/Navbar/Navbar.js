@@ -155,17 +155,19 @@ function Navbar() {
         </div>
       </IconContext.Provider>
       <div className={activeCart?'cart-sidebar-active': 'cart-sidebar-inactive'}>
-            <div className='cartSidebar-background'
-            onClick={() => activeCartHandle(false)}
-            >
-            </div>
-            <div className='cart-sidebar'>
-              <div className='cart-bar'>
-                <h4>Shopping Cart</h4>
-                <div className='cart-menu-icon' onClick={() => activeCartHandle(false)}>
-                  <FaTimes />
-                </div>
+          <div className='cartSidebar-background'
+          onClick={() => activeCartHandle(false)}
+          >
+          </div>
+          <div className='cart-sidebar'>
+            <div className='cart-bar'>
+              <h4>Shopping Cart</h4>
+              <div className='cart-menu-icon' onClick={() => activeCartHandle(false)}>
+                <FaTimes />
               </div>
+            </div>
+            {
+              totalItemQty?
               <div className='cart-sidebar-details'>
                 <div className='cart-sidebar-item'>
                   {
@@ -182,8 +184,13 @@ function Navbar() {
                   <Link ><button className="shopNowBtn checkout">Check Out</button></Link>
                 </div>
               </div>
-            </div>
+            :
+              <div className='empty-cart'>
+                <h5>Your cart is currently empty.</h5>
+              </div>
+            }
           </div>
+        </div>
     </>
   );
 }

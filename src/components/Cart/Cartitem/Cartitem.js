@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { AiOutlinePlus, AiOutlineMinus } from 'react-icons/ai';
+import { FaTimes } from 'react-icons/fa';
 import CartContext from '../../../Context/Context';
 import { addToDatabaseCart } from '../../../utilities/databaseManager';
 import './Cartitem.css';
@@ -60,7 +61,12 @@ const Cartitem = (props) => {
             </div>
             <div className="amount">
                 <p>{watch.quantity*watch.price}</p>
+                <p>
+                <FaTimes className='icon'
+                    onClick={() => removeFromCart(watch.key)}/>
+                </p>
             </div>
+            
         </div>
     );
 };

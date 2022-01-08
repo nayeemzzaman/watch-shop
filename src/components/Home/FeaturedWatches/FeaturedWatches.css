@@ -1,12 +1,12 @@
 .featuredWatches{
-    height: 105vh;
-    margin: 10px;
+    /* height: 105vh; */
+    /* border: 1px solid red; */
+    margin-left: 0.5em;
     margin-top: 0px;
 }
-.watch-upperRow,.watch-lowerRow{
-    height: 52vh;
-}
+
 .image{
+    /* border: 1px solid red; */
     height: 40vh;
 }
 .details{
@@ -14,7 +14,7 @@
 }
 .image img{
     height:fit-content;
-    width: 220px;
+    width: 13.5em;
     cursor: pointer;
     transform: scale(1);
     transition: all 0.5s ease;
@@ -50,10 +50,12 @@
     transition: all 0.5s ease;
 } 
 .hoverOnWatch1{
-    top: 120px;
+    margin-top: 8em;
+    /* top: 120px; */
 }
 .hoverOnWatch2{
-    top: 500px;
+    margin-top: 7.5em;
+    /* top: 500px; */
 }
 
 .watch-upperRow:hover .hoverOnWatch1{

@@ -14,7 +14,7 @@
   width: 130px;
   margin-top: 20px!important;
   background-color: transparent;
-  z-index: 1;
+  z-index: 0;
   transition: all 0.3s ease-in-out;
 }
 .shopNowBtn::before{

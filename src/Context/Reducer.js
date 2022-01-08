@@ -2,11 +2,11 @@ import fakeData from '../fakeData/fakedata';
 import { getDatabaseCart } from '../utilities/databaseManager';
 import { ADD_TO_CART, REMOVE_FROM_CART, REMOVE_SINGLE_ITEM_FROM_CART} from './Type';
 export const CartReducer = (state, action) =>{
-    console.log(action.payload);
+    // console.log(action.payload);
 
     const watchKey = action.payload.key;
     const sameWatch = state.cartItem.find(item => item.key===watchKey);
-    console.log(sameWatch);
+    // console.log(sameWatch);
     switch(action.type){
         case ADD_TO_CART:
             return {

@@ -12,9 +12,16 @@ import {
 import Navbar from './components/Shared/Navbar/Navbar';
 import Home from './components/Home/Home/Home';
 import Cart from './components/Cart/Cart/Cart';
-import Carts from './components/Cart/Carts/Carts';
+import { createContext } from 'react';
+import { useState } from 'react';
+import AddWatch from './components/Admin/AddWatch/AddWatch';
+
+export const loginContext = createContext();
+
 function App() {
+  const [loggedInUser, setLoggedInUser] = useState({});
   return (
+    <loginContext.Provider value={[loggedInUser, setLoggedInUser]}>
     <Router>
       <Switch>
         <Route path="/home">
@@ -26,8 +33,12 @@ function App() {
         <Route path="/cart">
           <Cart></Cart>
         </Route>
+        <Route path="/addWatch">
+          <AddWatch></AddWatch>
+        </Route>
       </Switch>
     </Router>
+    </loginContext.Provider>
   );
 }
 

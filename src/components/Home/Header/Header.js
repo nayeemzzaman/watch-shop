@@ -58,21 +58,21 @@ const Header = () => {
     return (
         <section className="header">
             <div className="slider-btn">
-                    <div className="prev-btn"
-                         onClick={()=>{sliderRef.current.slickPrev(); previousClick();}}
-                         >
-                        < BsArrowLeft/>
-                    </div>
-                    <div className="slider-background">
-                        <h2 className="sliderNumDynamic">1</h2>
-                        <h2 className="sliderNumFixed">4</h2>
-                    </div>
-                    <div className="next-btn"
-                         onClick={()=>{sliderRef.current.slickNext(); nextClick();}}>
-                        <BsArrowRight/>
-                    </div>
+                <div className="prev-btn"
+                        onClick={()=>{sliderRef.current.slickPrev(); previousClick();}}
+                        >
+                    < BsArrowLeft/>
                 </div>
-            <Slider id='slideShow' ref={sliderRef} {...settings}>
+                <div className="slider-background">
+                    <h2 className="sliderNumDynamic">1</h2>
+                    <h2 className="sliderNumFixed">4</h2>
+                </div>
+                <div className="next-btn"
+                        onClick={()=>{sliderRef.current.slickNext(); nextClick();}}>
+                    <BsArrowRight/>
+                </div>
+            </div>
+            <Slider id='slideShow'className='slide-show' ref={sliderRef} {...settings}>
                 <Carousel.Item>
                     <img
                         className="c-image d-block w-100"

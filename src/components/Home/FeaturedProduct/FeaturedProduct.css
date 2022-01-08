@@ -6,16 +6,26 @@
     height: 120vh;
     margin-bottom: 100px;
 }
-
+.featuredProduct-body{
+    display: flex;
+    
+}
+.featuredProduct-body .slick-slider{
+    min-width: 0;
+    min-height: 0;
+    width: 65%;
+}
 .featuredProduct-body .blackFriday{
-    float: left;
-    width: 30%;
+    /* border: 1px solid gray; */
+    /* float: left; */
+    width: 35%;
     height: 105vh;
     background-image: url("../../../images/black-friday-bg.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     text-align: center;
+    z-index: 0;
 }
 .featuredProduct-heading{
     display: flex;
@@ -42,9 +52,12 @@
 .slick-next:before {
   color: black;
 }
-.slider-btn{
+.featuredProduct-heading .slider-btn{
     display: flex;
+    position: absolute;
     justify-content: flex-end;
+    right: 0%;
+    margin-top: 5vh;
     margin-right: 5%;
 }
 .slider-btn .prev-btn,

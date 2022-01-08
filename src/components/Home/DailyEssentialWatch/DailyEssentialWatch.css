@@ -48,7 +48,87 @@
     transform: translateX(-3px) translateY(50px);
     transition: all 0.5s ease;
 } 
+.watch-modal{
+    position: absolute;
+    top: 13em;
+    left: 25em;
+    right: 20em;
+    bottom: 10em;
+    background-color: white;
+}
+.watch-modal .modal-details .modal-heading{
+    /* border: 1px solid red; */
+    height: 2em;
+    padding: 1em;
+    padding-top: 1.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.watch-modal .modal-details .heading .icon{
+    color: gray;
+    font-size: 1.3em;
+}
+.watch-modal .modal-details .modal-body{
+    display: flex;
+    align-items: center;
+    margin: 0px;
+}
+.watch-modal .modal-details img{
+    height: 8em;
+    /* border: 1px solid red; */
+    margin: 0;
+}
+.watch-modal .modal-details .cart-btn{
+    height: 5.5em;
+    /* border: 1px solid red; */
+    padding-bottom: 1em;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+.watch-modal .modal-details .cart-btn .shopNowBtn{
+    font-size: 1em;
+    letter-spacing: 2px;
+    width: 100%;
+    padding-left: 2em;
+    padding-right: 2em;
+    height: 3.5em;
+  }
 
+  .watch-modal .modal-details .cart-btn .checkout{
+    background-color: white;
+    color: black;
+  }
+  .watch-modal .modal-details .cart-btn .checkout::before{
+    background-color: black ;
+  }
+  .watch-modal .modal-details .cart-btn .checkout:hover{
+    color: white;
+  }
+  .watch-modal .modal-details .cart-btn .viewCart::before{
+    background-color:rgb(0, 0, 0,0.9);
+  }
+.Overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(0, 0, 0,0.3);
+  }
+.ReactModal__Overlay {
+    opacity: 0;
+    transition: opacity 300ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open{
+    opacity: 1;
+}
+
+.ReactModal__Overlay--before-close{
+    opacity: 0;
+}
 
 .dailyEssential-watch:hover .hoverOnWatch{
     transform: translateX(0px) translateY(0px);

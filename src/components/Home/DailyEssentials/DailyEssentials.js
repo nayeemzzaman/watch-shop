@@ -8,7 +8,7 @@ import CartContext, { CartState } from '../../../Context/Context';
 const DailyEssentials = () => {
     
     const {cartItem } = useContext(CartContext);
-    console.log(cartItem);
+    // console.log(cartItem);
     //addToDatabaseCart(cartItem)
     const [cart, setCart] = useState([]);
     const [watchData, setWatchData] = useState([]);
@@ -20,7 +20,7 @@ const DailyEssentials = () => {
         const watchKey = watch.key;
         const sameWatch = cartItem.find(item => item.key===watchKey);
         let count = 1;
-        if(sameWatch){
+        if(sameWatch){ 
             count = sameWatch.quantity+1;
             sameWatch.quantity = count;
         }

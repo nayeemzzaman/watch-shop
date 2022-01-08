@@ -1,0 +1,37 @@
+.addWatchPage{
+    margin-left: 20%;
+    padding-top: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    height: 120vh;
+    margin-bottom: 100px;
+}
+input[type="file"] {
+    
+    display: none;
+    
+}
+.custom-file-upload {
+    border: 1px solid transparent;
+    background-color: white;
+    color: rgb(4, 0, 255);;
+    padding: 6px 12px;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 10em;
+    /* font-size: 20px; */
+}
+.btn-style{
+    border: none;
+    background-color: white;
+    border: 1px solid black;
+    font-size: 20px;
+    width: 8em;
+    height: 37px;
+    transition: all 0.5s;
+}
+.btn-style:hover{
+    background-color: black;
+    color: white;
+    transition: all 0.5s;
+}

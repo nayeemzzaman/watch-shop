@@ -1,0 +1,76 @@
+.login-page{
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+    text-align: center;
+    width: 100%;
+    z-index: 999;
+}
+.loggedIn-page{
+
+    margin-top: 2em;
+    text-align: center;
+    width: 100%;
+}
+.login-form{
+    margin-top: 3em;
+}
+.login-page input{
+    font-size: 1em;
+    border: none;
+    padding: 1em;
+    border: 1px solid black;
+    margin-bottom: 2vh;
+    width: 20em;
+}
+.loginBtn{
+    width: 20em;
+    height: 3em;
+    font-size: 1em;
+    background-color: white;
+    border: 2px solid black;
+    color: black;
+    margin-top: 1em;
+    transition: all 0.5s ease;
+}
+.loginBtn:hover {
+    background-color: black;
+    color: white;
+    border: 2px solid transparent;
+    transition: all 0.5s ease;
+}
+.registerBtn{
+    width: 20em;
+    height: 3em;
+    font-size: 1em;
+    background-color: black;
+    border: 2px solid transparent;
+    color: white;
+    margin-top: 1em;
+    transition: all 0.5s ease;
+}
+.registerBtn:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    transition: all 0.5s ease;
+}
+.googleBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20em;
+    height: 3em;
+    font-size: 1em;
+    background-color: rgb(30, 109, 226);
+    border: 2px solid transparent;
+    color: white;
+    margin-top: 1em;
+    transition: all 0.5s ease;
+}
+.googleBtn:hover {
+    background-color: white;
+    color: rgb(30, 109, 226);
+    border: 2px solid rgb(30, 109, 226);
+    transition: all 0.5s ease;
+}
